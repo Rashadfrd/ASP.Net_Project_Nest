@@ -73,6 +73,23 @@ namespace NestProject.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("NestProject.Models.Color", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Colors");
+                });
+
             modelBuilder.Entity("NestProject.Models.Partner", b =>
                 {
                     b.Property<int>("Id")
@@ -183,6 +200,29 @@ namespace NestProject.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("NestProject.Models.ProductColor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ColorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ColorId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductColors");
+                });
+
             modelBuilder.Entity("NestProject.Models.ProductImage", b =>
                 {
                     b.Property<int>("Id")
@@ -206,6 +246,27 @@ namespace NestProject.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
+                });
+
+            modelBuilder.Entity("NestProject.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("NestProject.Models.Slider", b =>
@@ -263,6 +324,25 @@ namespace NestProject.Migrations
                     b.Navigation("Partner");
                 });
 
+            modelBuilder.Entity("NestProject.Models.ProductColor", b =>
+                {
+                    b.HasOne("NestProject.Models.Color", "Color")
+                        .WithMany("ProductColors")
+                        .HasForeignKey("ColorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NestProject.Models.Product", "Product")
+                        .WithMany("ProductColors")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Color");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("NestProject.Models.ProductImage", b =>
                 {
                     b.HasOne("NestProject.Models.Product", "Product")
@@ -284,6 +364,11 @@ namespace NestProject.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("NestProject.Models.Color", b =>
+                {
+                    b.Navigation("ProductColors");
+                });
+
             modelBuilder.Entity("NestProject.Models.Partner", b =>
                 {
                     b.Navigation("Products");
@@ -291,6 +376,8 @@ namespace NestProject.Migrations
 
             modelBuilder.Entity("NestProject.Models.Product", b =>
                 {
+                    b.Navigation("ProductColors");
+
                     b.Navigation("ProductImages");
                 });
 #pragma warning restore 612, 618

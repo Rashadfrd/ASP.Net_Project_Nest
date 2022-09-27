@@ -272,22 +272,28 @@
             <div class="col-lg-1-5 primary-sidebar sticky-sidebar">
                 <div class="sidebar-widget widget-category-2 mb-30">
                     <h5 class="section-title style-1 mb-30">Kateqoriyalar</h5>
-                    <ul id="ul-id">
+                    <ul class="ul-category">
+                        <li>
+                            <a href="#" @*asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id"*@> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />All</a><span class="count">@Model.Products.Count()</span>
+                        </li>
                         @foreach (var item in Model.Categories)
                         {
-                            <li colorId="0">
-                                <a asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id"> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />@item.Name</a><span class="count">@item.Products.Count()</span>
+                            <li categoryId="@item.Id">
+                                <a href="#" @*asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id"*@> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />@item.Name</a><span class="count">@item.Products.Count()</span>
                             </li>
                         }
                     </ul>
                 </div>
                 <div class="sidebar-widget widget-category-2 mb-30">
                     <h5 class="section-title style-1 mb-30">Satıcılar</h5>
-                    <ul>
+                    <ul class="ul-partner">
+                        <li>
+                            <a href="#" @*asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id"*@> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />All</a><span class="count">@Model.Products.Count()</span>
+                        </li>
                         @foreach (var item in Model.Partners)
                         {
-                            <li>
-                                <a asp-controller="Product" asp-action="Index" asp-route-partnerId="@item.Id"> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />@item.Name</a><span class="count">@item.Products.Count()</span>
+                            <li partnerId="@item.Id">
+                                <a href="#" @*asp-controller="Product" asp-action="Index" asp-route-partnerId="@item.Id"*@> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />@item.Name</a><span class="count">@item.Products.Count()</span>
                             </li>
                         }
                     </ul>
@@ -388,30 +394,35 @@
     </div>
 </main>
 <!-- Main Area ends -->
-@*@section scripts{
+@section scripts{
     <script>
         const obj = {
-            CategoryId:0,
+            CategoryId: 0,
+            PartnerId: 0,
         }
-        $("#ul-id a").click(function(e){
-            alert()
+        $(".ul-category a").click(function(e) {
             e.preventDefault();
-            obj.CategoryId = $(this).parent().attr("colorId");
+            obj.CategoryId = $(this).parent().attr("categoryId");
             getProducts();
         })
-        function getProducts(){
-                $.ajax({
-                    type: "GET",
-                    url: "/Product/ProductFilter",
-                    data: obj,
-                    dataType: "text",
-                    success: function (data) {
-                        $("#tab-context").html(data)
-                    },
-                    error: function (err) {
-                        document.write(err.responseText);
-                });
-            }
+        $(".ul-partner a").click(function(e) {
+            e.preventDefault();
+            obj.PartnerId = $(this).parent().attr("partnerId");
+            getProducts();
+        })
+        function getProducts() {
+            $.ajax({
+                type: "GET",
+                url: "/Product/ProductFilter",
+                data: obj,
+                dataType: "text",
+                success: function(data) {
+                    $("#tab-context").html(data)
+                },
+                error: function(err) {
+                    document.write(err.responseText);
+                }
+            });
         }
-    </script>  *@ 
+    </script>
 }

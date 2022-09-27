@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using NestProject.DAL;
 using NestProject.ViewModels;
+using Newtonsoft.Json;
 
 namespace Nesting.Controllers
 {
@@ -32,11 +33,22 @@ namespace Nesting.Controllers
         }
         public IActionResult ProductFilter(ProductFilterVM filter)
         {
-            var products = _context.Products.Include(p => p.ProductImages).AsQueryable ();
-            if (filter.CategoryId != 0)
+            var products = _context.Products.Include(p => p.ProductImages).Include(x => x.Badge).Include(x => x.Category).AsQueryable();
+            if (filter.CategoryId != 0 && filter.PartnerId != 0)
             {
-                products = products.Where(x=>x.CategoryId == filter.CategoryId);
+                products = products.Where(x => x.CategoryId == filter.CategoryId && x.PartnerId == filter.PartnerId);
             }
+            else
+            {
+                if (filter.CategoryId != 0)
+                {
+                    products = products.Where(x=>x.CategoryId == filter.CategoryId);
+                }
+                if (filter.PartnerId != 0)
+                {
+                    products = products.Where(x => x.PartnerId == filter.PartnerId);
+                }
+                }
             if (products is null) return NotFound();
             return PartialView("_FilterPartialView", products);
         }
@@ -51,6 +63,32 @@ namespace Nesting.Controllers
         public IActionResult Basket()
         {
             return View();
+        }
+        public IActionResult AddToCart(int? id)
+        {
+            if (id != null) return BadRequest();
+            List<BasketItem> basketItems;
+            if (HttpContext.Request.Cookies["Basket"] != null)
+            {
+                basketItems = JsonConvert.DeserializeObject<List<BasketItem>>(HttpContext.Request.Cookies["Basket"]);
+            }
+            else
+            {
+                basketItems = new List<BasketItem>();
+            }
+
+            var alreadyAddedPrd = basketItems.Find(x => x.ProductId == id);
+            if (alreadyAddedPrd is null)
+            {
+            basketItems.Add(new BasketItem { Count = 1, ProductId = (int)id });
+            }
+            else
+            {
+                alreadyAddedPrd.Count++;
+            }
+
+            HttpContext.Response.Cookies.Append("Basket", JsonConvert.SerializeObject(basketItems), new CookieOptions { MaxAge = TimeSpan.MaxValue });
+            return Json(HttpContext.Request.Cookies["Basket"]);
         }
     }
 }

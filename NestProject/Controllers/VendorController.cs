@@ -27,7 +27,7 @@ namespace Nesting.Controllers
             if (id is null) return RedirectToAction(nameof(Index));
             VendorVM vm = new VendorVM();
             vm.Categories = _context.Categories;
-            vm.Products = _context.Products.Include(x => x.Badge).Include(x => x.ProductImages).Include(x => x.Category);
+            vm.Products = _context.Products.Include(x => x.Badge).Include(x => x.ProductImages).Include(x => x.Category).Where(x=>x.PartnerId == id);
             vm.Partner = _context.Partners.FirstOrDefault(x => x.Id == id);
             return View(vm);
         }

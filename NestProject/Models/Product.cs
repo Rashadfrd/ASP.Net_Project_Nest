@@ -29,5 +29,6 @@ namespace NestProject.Models
         public int PartnerId { get; set; }
         public Partner Partner { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
+        public ICollection<ProductColor> ProductColors { get; set; }
     }
 }

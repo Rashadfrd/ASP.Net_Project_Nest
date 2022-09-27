@@ -88,7 +88,7 @@
                     <div class="vendor-wrap style-2 mb-40">
                         <div class="vendor-img-action-wrap">
                             <div class="vendor-img">
-                                <a asp-controller="Vendor" asp-action="Detail" asp-route-id="id" >
+                                <a asp-controller="Vendor" asp-action="Detail" asp-route-id="@item.Id" >
                                     <img class="default-img" src="~/assets/imgs/vendor/@item.ProfileImageUrl" alt="" />
                                 </a>
                             </div>
@@ -101,7 +101,7 @@
                                 <div class="product-category">
                                     <span class="text-muted">Since @item.FoundedYear</span>
                                 </div>
-                                <h4 class="mb-5"><a href="vendor-details-1.html">@item.Name</a></h4>
+                                <h4 class="mb-5"><a asp-controller="Vendor" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a></h4>
 
                                 <div class="product-rate-cover">
                                     <div class="product-rate d-inline-block">

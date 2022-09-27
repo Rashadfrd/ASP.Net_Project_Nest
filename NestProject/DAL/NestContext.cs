@@ -14,5 +14,8 @@ namespace NestProject.DAL
         public DbSet<Badge> Badges { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Partner> Partners { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<ProductColor> ProductColors { get; set; }
+        public DbSet<Setting> Settings { get; set; }
     }
 }
