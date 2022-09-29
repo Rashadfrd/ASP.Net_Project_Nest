@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model IEnumerable<Slider>
+<div class="card mb-4">
+    <div class="card-body">
+        @foreach (var item in Model)
+        {
+            <article class="itemlist">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-sm-4 col-8 flex-grow-1 col-name">
+                        <a class="itemside" href="#">
+                            <div class="left">
+                                <img src="~/assets/imgs/slider/@item.ImageUrl" class="img-sm img-thumbnail" alt="Item" />
+                            </div>
+                            <div class="info">
+                                <h6 class="mb-0">@item.Title.Substring(0,15)...</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-2 col-4 col-price"><span>@item.Order</span></div>
+                    <div class="col-lg-1 col-sm-2 col-4 col-date">
+                        <span>@item.Id</span>
+                    </div>
+                    <div class="col-lg-2 col-sm-2 col-4 col-action text-end">
+                        <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
+                        <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
+                    </div>
+                </div>
+                <!-- row .// -->
+            </article>
+            <!-- itemlist  .// -->
+        }
+    </div>
+</div>

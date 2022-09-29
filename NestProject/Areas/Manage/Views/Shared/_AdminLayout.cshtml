@@ -42,7 +42,17 @@
                     </a>
                     <div class="submenu">
                         <a asp-area="Manage" asp-controller="Product" asp-action="Index">Product List</a>
-                        <a href="page-categories.html">Categories</a>
+                        <a asp-controller="Category" asp-action="Index">Categories</a>
+                        <a asp-controller="Slider" asp-action="Index">Sliders</a>
+                    </div>
+                </li>
+                <li class="menu-item has-submenu">
+                    <a class="menu-link" href="page-products-list.html">
+                        <i class="icon material-icons md-shopping_bag"></i>
+                        <span class="text">Add Products</span>
+                    </a>
+                    <div class="submenu">
+                        <a asp-controller="Category" asp-action="AddCategory">Add Categories</a>
                     </div>
                 </li>
             </ul>
@@ -125,15 +135,7 @@
             </div>
         </header>
         <section class="content-main">
-            <div class="content-header">
-                <h2 class="content-title">Title</h2>
-                <div>
-                    <a href="#" class="btn btn-primary">Create new</a>
-                </div>
-            </div>
-            <div class="card mb-4">
                 @RenderBody()
-            </div>
             <!-- card end// -->
             <footer class="main-footer font-xs">
                 <div class="row pb-30 pt-15">
