@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NestProject.DAL;
+using NestProject.Models;
 
 namespace NestProject.Areas.Manage.Controllers
 {
@@ -19,6 +20,15 @@ namespace NestProject.Areas.Manage.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Slider slider)
+        {
+            slider.ImageUrl = " ";
+            _context.Sliders.Add(slider);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
         public IActionResult Delete()
         {
