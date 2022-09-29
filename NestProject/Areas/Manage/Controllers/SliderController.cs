@@ -30,9 +30,12 @@ namespace NestProject.Areas.Manage.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            return View();
+            var slider = _context.Sliders.FirstOrDefault(x => x.Id == id);
+            _context.Sliders.Remove(slider);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

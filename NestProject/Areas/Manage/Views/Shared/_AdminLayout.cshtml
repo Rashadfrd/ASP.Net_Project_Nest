@@ -38,7 +38,7 @@
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-products-list.html">
                         <i class="icon material-icons md-shopping_bag"></i>
-                        <span class="text">Products</span>
+                        <span class="text">Lists</span>
                     </a>
                     <div class="submenu">
                         <a asp-area="Manage" asp-controller="Product" asp-action="Index">Product List</a>
@@ -49,7 +49,7 @@
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-products-list.html">
                         <i class="icon material-icons md-shopping_bag"></i>
-                        <span class="text">Add Products</span>
+                        <span class="text">Add</span>
                     </a>
                     <div class="submenu">
                         <a asp-controller="Category" asp-action="AddCategory">Add Categories</a>
@@ -159,6 +159,7 @@
     <script src="~/manage/assets/js/vendors/jquery.fullscreen.min.js"></script>
     <!-- Main Script -->
     <script src="~/manage/assets/js/main.js?v=1.1" type="text/javascript"></script>
+    @await RenderSectionAsync("scripts",false)
 </body>
 </html>
 
