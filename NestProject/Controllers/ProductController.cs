@@ -52,9 +52,10 @@ namespace Nesting.Controllers
             if (products is null) return NotFound();
             return PartialView("_FilterPartialView", products);
         }
-        public IActionResult Detail()
+        public IActionResult Detail(int id)
         {
-            return View();
+            var product = _context.Products.Include(x => x.ProductImages);
+            return View(product);
         }
         public IActionResult Compare()
         {
