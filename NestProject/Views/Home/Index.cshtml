@@ -143,7 +143,7 @@
                                 <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".1s">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
                                                 @if (@item.ProductImages != null)
                                                 {
                                                     @foreach (var prdimg in item.ProductImages.Where(x => x.Status != null))
@@ -169,7 +169,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">@item.Category.Name</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">@item.Name</a></h2>
+                                        <h2><a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a></h2>
                                         <div class="product-rate-cover">
                                             <div class="product-rate d-inline-block">
                                                 <div class="product-rating" style="width:@(item.ReviewSum/item.ReviewCount)%"></div>

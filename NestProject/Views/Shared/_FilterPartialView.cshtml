@@ -59,7 +59,7 @@
             </div>
 
             <div class="mt-30 d-flex align-items-center">
-                <a aria-label="Buy now" class="btn" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add to Cart</a>
+                <a aria-label="Buy now" class="btn" asp-controller="Product" asp-action="AddToBasket" asp-route-id="@item.Id"><i class="fi-rs-shopping-cart mr-5"></i>Add to Cart</a>
                 <a href="#" class="add-wishlish ml-30 text-body font-sm font-heading font-weight-bold"><i class="fi-rs-shuffle mr-5"></i>Add Compare</a>
             </div>
         </div>

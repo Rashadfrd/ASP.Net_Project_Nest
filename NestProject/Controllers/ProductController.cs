@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NestProject.DAL;
+using NestProject.Models;
 using NestProject.ViewModels;
 using Newtonsoft.Json;
 
@@ -54,7 +55,7 @@ namespace Nesting.Controllers
         }
         public IActionResult Detail(int id)
         {
-            var product = _context.Products.Include(x => x.ProductImages);
+            Product product = _context.Products.Include(x=>x.ProductImages).FirstOrDefault(x=>x.Id == id);
             return View(product);
         }
         public IActionResult Compare()
@@ -65,9 +66,9 @@ namespace Nesting.Controllers
         {
             return View();
         }
-        public IActionResult AddToCart(int? id)
+        public IActionResult AddToBasket(int? id)
         {
-            if (id != null) return BadRequest();
+            if (id == null) return BadRequest();
             List<BasketItem> basketItems;
             if (HttpContext.Request.Cookies["Basket"] != null)
             {
