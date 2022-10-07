@@ -23,11 +23,13 @@
                 <div class="card-body">
                     <div class="input-upload">
                         <img src="~/manage/assets/imgs/theme/upload.svg" alt="" />
-                        <input class="form-control" asp-for="ImageUrl" />
+                        <input class="form-control" asp-for="ImageFile" />
+                        <span asp-validation-for="ImageFile"></span>
                     </div>
                     <div class="mb-4">
                         <label class="form-label" asp-for="Name"></label>
                         <input class="form-control" asp-for="Name"/>
+                        <span asp-validation-for="Name"></span>
                     </div>
                     <button type="submit" class="btn btn-success">Create</button>
                 </div>

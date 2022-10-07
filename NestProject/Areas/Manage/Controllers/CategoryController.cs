@@ -28,14 +28,19 @@ namespace NestProject.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult AddCategory(Category category)
         {
-            category.ImageUrl = " ";            
+            if (category.ImageFile is null) ModelState.AddModelError("ImageFile", "Zehmet olmasa sekil elave edin");
+            if (!ModelState.IsValid) return View();
+
             _context.Categories.Add(category);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int? id)
         {
-            var category = _context.Categories.Find(id);
+            if (id is null) return BadRequest();
+            var category = _context.Categories.Include(x=>x.Products).FirstOrDefault(x=>x.Id == id);
+            if (category != null) return NotFound("Kateqoriya tapilmadi");
+            if (category.Products.Count > 0) return BadRequest("Bu kateqoriyaya aid productlar movcuddur");
             if (category.IsDeleted == false)
             {
                 category.IsDeleted = true;

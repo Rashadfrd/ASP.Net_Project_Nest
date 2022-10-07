@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NestProject.Models
 {
@@ -10,5 +11,7 @@ namespace NestProject.Models
         public bool IsDeleted{ get; set; }
         public DateTime? ModifiedTime { get; set; }
         public ICollection<Product>Products { get; set; }
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; }
     }
 }
