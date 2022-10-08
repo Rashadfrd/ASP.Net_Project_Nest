@@ -9436,19 +9436,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rashad\\.nuget\\packages\\": {}
+    "C:\\Users\\ferha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rashad\\Desktop\\NestProject\\NestProject\\NestProject.csproj",
+      "projectUniqueName": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\NestProject.csproj",
       "projectName": "NestProject",
-      "projectPath": "C:\\Users\\Rashad\\Desktop\\NestProject\\NestProject\\NestProject.csproj",
-      "packagesPath": "C:\\Users\\Rashad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rashad\\Desktop\\NestProject\\NestProject\\obj\\",
+      "projectPath": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\NestProject.csproj",
+      "packagesPath": "C:\\Users\\ferha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rashad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ferha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9511,7 +9511,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

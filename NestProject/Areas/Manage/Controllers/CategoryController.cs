@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using NestProject.DAL;
 using NestProject.Models;
+using NestProject.Utilities.Extensions;
 
 namespace NestProject.Areas.Manage.Controllers
 {
@@ -30,7 +31,21 @@ namespace NestProject.Areas.Manage.Controllers
         {
             if (category.ImageFile is null) ModelState.AddModelError("ImageFile", "Zehmet olmasa sekil elave edin");
             if (!ModelState.IsValid) return View();
-
+            var file = category.ImageFile;
+            if (!file.CheckFileExtension("image/"))
+            {
+                ModelState.AddModelError("ImageFile", "Yüklədiyiniz fayl şəkil deyil");
+                return View();
+            }
+            if (file.CheckFileSize(2))
+            {
+                ModelState.AddModelError("ImageFile", "Yüklədiyiniz fayl 2mb-dan artıq olmamalıdır");
+                return View();
+            }
+            string newFileName = Guid.NewGuid().ToString();
+            newFileName += file.CutFileName(60);
+            file.SaveFile(Path.Combine("imgs", "shop", newFileName));
+            category.ImageUrl = newFileName;
             _context.Categories.Add(category);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));

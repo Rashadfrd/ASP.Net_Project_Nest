@@ -37,4 +37,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+NestProject.Utilities.Constants.Constants.RootPath = Path.Combine(app.Environment.WebRootPath, "assets");
+
 app.Run();

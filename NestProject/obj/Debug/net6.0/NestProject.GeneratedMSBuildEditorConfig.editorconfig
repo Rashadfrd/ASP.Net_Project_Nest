@@ -8,93 +8,93 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NestProject
 build_property.RootNamespace = NestProject
-build_property.ProjectDir = C:\Users\Rashad\Desktop\NestProject\NestProject\
+build_property.ProjectDir = C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Rashad\Desktop\NestProject\NestProject
+build_property.MSBuildProjectDirectory = C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/Category/AddCategory.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Category/AddCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XEFkZENhdGVnb3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/Category/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/DashBoard/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/DashBoard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hCb2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/Product/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/Slider/Create.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Slider/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/Slider/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/_ViewImports.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Areas/Manage/Views/_ViewStart.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Home/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Product/Basket.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Product/Basket.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxCYXNrZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Product/Compare.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Product/Compare.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDb21wYXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Product/Detail.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Product/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Shared/_FilterPartialView.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Shared/_FilterPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GaWx0ZXJQYXJ0aWFsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Shared/_Layout.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Shared/_ProductsPartialView.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Shared/_ProductsPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0c1BhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Vendor/Detail.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Vendor/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZG9yXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/Vendor/Index.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/Vendor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/_ViewImports.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashad/Desktop/NestProject/NestProject/Views/_ViewStart.cshtml]
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
