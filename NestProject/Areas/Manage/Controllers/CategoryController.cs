@@ -69,6 +69,43 @@ namespace NestProject.Areas.Manage.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+        public IActionResult Update(int? id)
+        {
+            if (id is null) return BadRequest();
+            var category = _context.Categories.FirstOrDefault(x => x.Id == id);
+            if (category is null) return NotFound();
+            return View(category);
+        }
+
+        [HttpPost]
+        public IActionResult Update(int? id, Category category)
+        {
+            if (id != category.Id || id is null) return BadRequest();
+            Category cat = _context.Categories.Find(id);
+            if (cat is null) return NotFound();
+            if (category.ImageFile != null)
+            {
+                IFormFile file = category.ImageFile;
+                if (!file.CheckFileExtension("image/"))
+                {
+                    ModelState.AddModelError("ImageFile", "Yüklədiyiniz fayl şəkil deyil");
+                    return View();
+                }
+                if (file.CheckFileSize(2))
+                {
+                    ModelState.AddModelError("ImageFile", "Yüklədiyiniz fayl 2mb-dan artıq olmamalıdır");
+                    return View();
+                }
+                string newFileName = Guid.NewGuid().ToString();
+                newFileName += file.CutFileName();
+                RemoveFile(Path.Combine("imgs", cat.ImageUrl));
+                file.SaveFile(Path.Combine("imgs", "shop", newFileName));
+                cat.ImageUrl = newFileName;
+            }
+            cat.Name = category.Name;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
         public static void RemoveFile(string path)
         {
             path = Path.Combine(Constants.RootPath, "img", path);

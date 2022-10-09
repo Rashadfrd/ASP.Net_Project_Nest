@@ -23,6 +23,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Category/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/DashBoard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hCb2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +45,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Vendor/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFZlbmRvclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Vendor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFZlbmRvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/Vendor/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFZlbmRvclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ferha/OneDrive/Desktop/ASP.Net_Project_Nest/NestProject/Areas/Manage/Views/_ViewImports.cshtml]
