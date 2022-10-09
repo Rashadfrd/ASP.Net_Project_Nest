@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NestProject.Models;
 
 namespace NestProject.DAL
 {
-    public class NestContext:DbContext
+    public class NestContext:IdentityDbContext
     {
         public NestContext(DbContextOptions<NestContext> opt):base(opt)
         {
@@ -17,5 +18,6 @@ namespace NestProject.DAL
         public DbSet<Color> Colors { get; set; }
         public DbSet<ProductColor> ProductColors { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
     }
 }

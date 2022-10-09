@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NestProject.DAL;
+using NestProject.Models;
 using NestProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<LayoutService>();
+builder.Services.AddIdentity<AppUser, IdentityRole>(con =>
+{
+    con.Password.RequiredLength = 8;
+    con.Password.RequireNonAlphanumeric = false;
+    con.User.RequireUniqueEmail = true;
+    con.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._";
+})
+    .AddDefaultTokenProviders()
+    .AddEntityFrameworkStores<NestContext>();
 builder.Services.AddDbContext<NestContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration["ConnectionStrings:default"]);
@@ -25,6 +36,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

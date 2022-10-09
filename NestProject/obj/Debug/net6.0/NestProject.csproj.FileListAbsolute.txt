@@ -520,3 +520,8 @@ C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\obj\Debug\net6.
 C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\obj\Debug\net6.0\NestProject.pdb
 C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\obj\Debug\net6.0\NestProject.genruntimeconfig.cache
 C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\obj\Debug\net6.0\ref\NestProject.dll
+C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ferha\OneDrive\Desktop\ASP.Net_Project_Nest\NestProject\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
