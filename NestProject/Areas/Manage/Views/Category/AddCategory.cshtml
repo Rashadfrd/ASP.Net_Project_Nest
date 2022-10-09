@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "AddCategory";
 }
 @model Category
@@ -13,23 +12,27 @@
             </div>
         </div>
     </div>
- <div class="card mb-4">
+</div>
+<div class="card mb-4">
     <div class="col-lg-12">
-        <form asp-controller="Category" asp-action="AddCategory" asp method="post">
+        <form asp-controller="Category" asp-action="AddCategory" method="post" enctype="multipart/form-data">
             <div class="card mb-4">
                 <div class="card-header">
                     <h4>Media</h4>
                 </div>
                 <div class="card-body">
+                    <div asp-validation-summary="ModelOnly">
+
+                    </div>
                     <div class="input-upload">
-                        <img src="~/manage/assets/imgs/theme/upload.svg" alt="" />
+                        <label class="text-center w-100" asp-for="ImageFile"><img src="~/manage/assets/imgs/theme/upload.svg" alt="" /></label>
                         <input class="form-control" asp-for="ImageFile" />
-                        <span asp-validation-for="ImageFile"></span>
+                        <span class="text-danger" asp-validation-for="ImageFile"></span>
                     </div>
                     <div class="mb-4">
                         <label class="form-label" asp-for="Name"></label>
-                        <input class="form-control" asp-for="Name"/>
-                        <span asp-validation-for="Name"></span>
+                        <input class="form-control" asp-for="Name" />
+                        <span class="text-danger" asp-validation-for="Name"></span>
                     </div>
                     <button type="submit" class="btn btn-success">Create</button>
                 </div>

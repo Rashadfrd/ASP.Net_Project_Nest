@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using NestProject.DAL;
 using NestProject.Models;
+using NestProject.Utilities.Constants;
 using NestProject.Utilities.Extensions;
 
 namespace NestProject.Areas.Manage.Controllers
@@ -29,7 +30,7 @@ namespace NestProject.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult AddCategory(Category category)
         {
-            if (category.ImageFile is null) ModelState.AddModelError("ImageFile", "Zehmet olmasa sekil elave edin");
+            if (category.ImageFile is null) ModelState.AddModelError("ImageFile", "Zehmet olmasa fayl secin");
             if (!ModelState.IsValid) return View();
             var file = category.ImageFile;
             if (!file.CheckFileExtension("image/"))
@@ -54,7 +55,7 @@ namespace NestProject.Areas.Manage.Controllers
         {
             if (id is null) return BadRequest();
             var category = _context.Categories.Include(x=>x.Products).FirstOrDefault(x=>x.Id == id);
-            if (category != null) return NotFound("Kateqoriya tapilmadi");
+            if (category is null) return NotFound("Kateqoriya tapilmadi");
             if (category.Products.Count > 0) return BadRequest("Bu kateqoriyaya aid productlar movcuddur");
             if (category.IsDeleted == false)
             {
@@ -62,10 +63,19 @@ namespace NestProject.Areas.Manage.Controllers
             }
             else
             {
-            _context.Categories.Remove(category);
+                RemoveFile(Path.Combine("shop", category.ImageUrl));
+                _context.Categories.Remove(category);
             }
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
+        }
+        public static void RemoveFile(string path)
+        {
+            path = Path.Combine(Constants.RootPath, "img", path);
+            if (System.IO.File.Exists(path))
+            {
+                System.IO.File.Delete(path);
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+x7MXyTQmPiet78xsVOIvF2vb/89mw99Ej2FDkhWrIg=",
+  "Hash": "DMpDaSWKt3NeGOkdwqOPKXkDPlAPvRtr2wGY/WMYlQU=",
   "Source": "NestProject",
   "BasePath": "_content/NestProject",
   "Mode": "Default",
@@ -1462,6 +1462,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\imgs\\page\\page-404.png"
     },
     {
+      "Identity": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\wwwroot\\assets\\imgs\\shop\\6b79151c-ebe8-493f-aee2-8a1f8c97b904wallpaper.jpg",
+      "SourceId": "NestProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\wwwroot\\",
+      "BasePath": "_content/NestProject",
+      "RelativePath": "assets/imgs/shop/6b79151c-ebe8-493f-aee2-8a1f8c97b904wallpaper.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\imgs\\shop\\6b79151c-ebe8-493f-aee2-8a1f8c97b904wallpaper.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\wwwroot\\assets\\imgs\\shop\\cat-1.png",
       "SourceId": "NestProject",
       "SourceType": "Discovered",
@@ -1732,6 +1749,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\imgs\\shop\\cat-9.png"
+    },
+    {
+      "Identity": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\wwwroot\\assets\\imgs\\shop\\e9521658-fccf-4cb1-9dca-caa0a91ccc3foriginal.jpg",
+      "SourceId": "NestProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\wwwroot\\",
+      "BasePath": "_content/NestProject",
+      "RelativePath": "assets/imgs/shop/e9521658-fccf-4cb1-9dca-caa0a91ccc3foriginal.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\imgs\\shop\\e9521658-fccf-4cb1-9dca-caa0a91ccc3foriginal.jpg"
     },
     {
       "Identity": "C:\\Users\\ferha\\OneDrive\\Desktop\\ASP.Net_Project_Nest\\NestProject\\wwwroot\\assets\\imgs\\shop\\product-10-1.jpg",
