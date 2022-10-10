@@ -29,6 +29,7 @@ namespace NestProject.Controllers
             if(existUser != null)
             {
                 ModelState.AddModelError("Username", "This User already exists");
+                return View();
             }
             AppUser appUser = new AppUser()
             {
@@ -53,6 +54,31 @@ namespace NestProject.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(UserLoginVM user)
+        {
+            if (!ModelState.IsValid) return View();
+            var existUser = await _userManager.FindByNameAsync(user.Username);
+            if (existUser is null)
+            {
+                ModelState.AddModelError("", "Username or password is wrong");
+                return View();
+            }
+            var result = await _signInManager.PasswordSignInAsync(existUser, user.Password, user.RememberMe, true);
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Username or password is wrong");
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        public async Task<IActionResult> SignOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
         }
     }
 }
